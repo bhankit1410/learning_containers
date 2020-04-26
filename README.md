@@ -58,4 +58,6 @@
 
 	$ kubectl rollout undo deployment hello-deploy --to-revision = <revision no.>
 
+## To install and run services on a remote k8s cluster, use helm. 
 
+#### if you're using helm 2 or below, use tiller at remote to receive the helm instructions from client.
