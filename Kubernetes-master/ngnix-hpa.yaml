@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ngnix-hpa
+spec:
+  selector:
+    matchLabels:
+      app: ngnix-hpa
+  template:
+    metadata:
+      labels:
+        app: ngnix-hpa
+    spec:
+      containers:
+      - name: ngnix-hpa
+        image: ngnix
+        resources:
+          limits:
+            memory: "18Mi"
+            cpu: "50m"
+        # ports:
+        # - containerPort: <Port>
